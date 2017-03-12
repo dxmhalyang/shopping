@@ -1,0 +1,190 @@
+/*
+* @Author: dkm
+* @Date:   2017-02-18 10:42:52
+* @Last Modified by:   dkm
+* @Last Modified time: 2017-03-06 23:20:54
+*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+html .hide{display:none;}
+
+#header{background: url("../images/headerbg.png") repeat-x scroll 0 0 #FFFFFF;
+    height: 105px;}
+.header-content{width: 990px;height: 105px; margin: 0 auto;position: relative;}
+.header-content .logo{float: left; width: 150px;height: 60px;margin-left: 10px; background: url(../images/logo.gif) no-repeat;}
+.header-content .search{float: left;margin: 20px 38px;height: 17px;width: 200px; color: #999999;font-size: 14px; padding: 3px 6px 5px 6px;}
+.search.focus{ border: 1px solid #00A5FF;}
+.header-content .skin{float: right; margin: 13px 10px;}
+.skin li{display:inline-block;float: left;margin-right: 4px; width: 15px;height: 15px;cursor:pointer; text-indent: -9999px;background: url(../images/theme.gif) no-repeat; }
+.skin .bule{ background-position:0 0;}
+.skin .purpuo{ background-position:-100px 0;}
+.skin .red{ background-position:-80px 0;}
+.skin .sky-blue{ background-position:-60px 0;}
+.skin .organ{ background-position:-40px 0;}	
+.skin .green{ background-position:-20px 0;}
+.header-nav{z-index: 100; float: left;position: absolute; bottom: 0px;left: 0;width: 990px;height: 37px;background-color: #4A4A4A;}
+.header-nav .nav-list{ float: left;margin: 10px 25px;}
+.header-nav li{ display: inline-block; color: #FFFFFF;line-height: 10px;margin-right: 14px;position: relative;}
+.header-nav li a{color: #fff;padding: 0 8px;font-weight:700;font-size: 14px;}
+.nav-list .list-show{display:none; z-index: 1000; position: absolute;top:24px;left: 0;width: 474px;border-top:0; border: 1px solid #B1B1B1; z-index: 1000;background:#FFFFFF;}
+dl{float: left;border-top: 1px dashed #C4C4C4;}
+.list-show dt a{color: #121212;font-size: 12px; font-weight: 700;}
+dt{line-height: 50px;float: left;height: 70px;width: 76px;text-align: center;}
+dd{margin-top:11px;overflow: hidden;width: 364px;}
+dd em{float: left;border-right: 1px solid #CCCCCC;height: 14px; line-height: 14px;margin:5px 0; font-style: normal;}
+.list-show em a{color: #666;font-size:12px;}
+.hide{display: none;}
+
+
+#content{width: 990px;height: 580px;margin: 0 auto; position: relative;}
+#content .con-width{margin: 10px 0;}
+.con-width .con-nav{ width: 187px;height: 560px;overflow: hidden;margin: 0 10px 0 0;float: left;}
+.con-nav h2{ width: 187px;height: 30px;line-height: 30px;text-indent: 13px;  background-color: #6E6E6E;color: #fff;}
+.clear{clear: both;float: none;height: 0;overflow: hidden;}
+
+.nav-left{width: 165px;height: 524px;padding:5px 10px 0; border: 1px solid #6E6E6E;border-style: none solid solid;}
+.nav-left h3{width: 164px;height: 24px;border-bottom: 1px solid #EEE;line-height: 24px;}
+.nav-left ul{float: left; padding-bottom: 8px;  }
+.nav-left li{float: left; width: 79px;height: 24px;line-height: 24px;position: relative; }
+.nav-left li a{color: #444444;display: inline-block; }
+.nav-left li .hot {background: url("../images/hot.gif") no-repeat scroll 0 0 transparent;height: 16px; position: absolute;top: 0;width: 21px;}
+.nav-left li a:hover{text-decoration: none;color: #008CD7; }
+.nav-left li .promoted{color: #F30F0F;}
+/*大屏导览*/
+.con-img{float: left;width: 550px;height: 320px;margin-right: 10px;position: relative;overflow: hidden; }
+.con-img img{position: absolute;top: 0;left: 0;}
+.con-img .top{float: left; position: absolute;bottom:0px;overflow: hidden;}
+.con-img .change{ background: url("../images/adindex.gif") no-repeat center 39px #37A7D7; }
+.top a{display:inline-block;float: left; width:79px;overflow: hidden; height: 32px;text-align: center; background-color: #444444;color: #FFFFFF;padding: 5px 15px;margin-right: 1px; }
+.top .last{margin: 0;width: 80px;}
+.top a:hover{text-decoration: none;}
+.top a em{display: block;text-align: center;height: 16px;overflow: hidden;}
+#src{
+	position: absolute;/*一定要加定位，不然只会出现屏幕最底下*/
+	display:none;
+}
+/*优惠提示*/
+.con-notice{float: left;width: 230px;height: 321px;overflow: hidden;position: relative;}
+.right-pic{ margin-bottom: 10px;height: 176px;
+	transition: 1s all;
+	-o-transition: 1s all;/*支持Opera浏览器*/
+	-ms-transition: 1s all;/*支持IE浏览器*/
+	-moz-transition: 1s all;/*支持Firefox火狐浏览器*/
+	-webkit-transition: 1s all;/*支持Chrome 和Safari*/
+}
+.right-pic:hover{
+	transform: rotate(720deg) ;
+	-o-transform: rotate(720deg) ;/*支持Opera浏览器*/
+	-ms-transform: rotate(720deg) ;/*支持IE浏览器*/
+	-moz-transform: rotate(720deg);/*支持Firefox火狐浏览器*/
+	-webkit-transform: rotate(720deg) ;/*支持Chrome 和Safari*/
+				}
+.right-notic{width: 228px;height: 133px;border: 1px solid #CCCCCC;overflow: hidden;}
+.right-notic h2{width: 228px;height: 23px;line-height: 23px;text-indent: 12px;border-bottom: 1px solid #CCC;}
+.right-notic ul{float: left; padding: 6px 2px 0px 12px;}
+.right-notic li{line-height: 20px;height: 20px;overflow: hidden;}
+.right-notic li a{color: #666666;}
+.right-notic li a:hover{text-decoration: none;color: #008CD7;}
+/*为js增加的id=tooltip的<div>增加CSS样式*/
+#tooltip{
+	position: absolute;/*一定要加定位，不然只会出现屏幕最底下*/
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:1px;
+	color:#333;
+	display:none;
+}
+/*图片滚动*/
+.con-brand{float: left;width: 790px;height: 230px;margin-top: 10px; }
+.brand-header{width: 790px;height: 29px;border-bottom: 1px solid #CCCCCC;position: relative;}
+.brand-header h2{height: 29px;line-height: 29px;float: left;}
+.brand-header ul{position: absolute;top:10px;right: 0; }/*为了给新加的.chos样式的三角符号增加展示的空间，于是定了top:10px;而不是bottom:0px;就是把<ul>标签绝对定位，让他向下溢出父级的<div>，增加边即可看到*/
+.brand-header li{float: left; margin: 0 10px 0 0;  cursor: pointer;}
+.brand-header li a{background-color: #E4E4E4;height: 20px;padding: 0 10px; line-height: 20px; color: #000;display: inline-block;}
+.brand-header .chos {
+    background: url("../images/chos.gif") no-repeat scroll 50% bottom transparent;
+ 																/*scroll  背景图随页面滚动
+																50% bottom是给背景图片定位置
+																transparent   背景色透明*/
+    padding-bottom: 3px;/*底边增加3px内边距就是为了显示新增的三角形下标*/
+}       /*并且防止三角形图标被下面的background-color覆盖，所以这两个需要对应不同的元素*/
+.brand-header .chos a {
+    background-color: #FA5889;
+    color: #FFFFFF;
+    outline: 0 none; 
+}
+.brand-con{width: 790px;height: 188px;margin: 8px 0;overflow: hidden; position: relative; }
+.con-list{position: absolute;top: 0;left: 0;width: 3200px;}
+.brand-con ul{ float: left;}
+.brand-con li{float: left;width: 185px;height: 188px;padding:0 5px;overflow: hidden;position: relative;}
+.brand-con li img {
+    left: 5px;
+    position: absolute;
+    top: 0;
+}
+.brand-con li span{display: block;text-align: center;width: 183px; height:24px;line-height: 24px;font-size: 14px;background-color: #EFEFEF;color: #666666;position: absolute;bottom: 0px;  }
+.brand-con li span:hover{color: #008CD7;}
+
+/*底部footer*/
+#footer{width: 990px;padding:18px 0;margin: 0 auto;text-align: center;color: #666666; }
+
+/*详情页*/
+.conten-list{width: 312px;height: 560px;margin-right: 10px; float: left;}
+.list-img{border: 1px #C7C6C6 solid;width: 310px;height: 310px;}
+.conten-list span{display: block; margin: 10px 0;text-align: center;}
+.conten-list ul{float: left;width: 320px;height: 80px;}
+.conten-list ul li{float: left;margin-right: 10px; }
+.conten-list ul li img{width: 60px;height:60px;padding: 1px; cursor: pointer;}
+.conten-list ul li img:hover{	padding:1px; background:#999; }
+.tab{height: 230px;clear: both;overflow: hidden;}
+.list-info ul{float: left;height: 22px;}
+
+.list-info ul li{float: left;height: 18px;list-style:none; padding: 1px 6px;border: 1px #898989 solid;background:#F1F1F1;cursor: pointer; border-bottom:none;  margin-right: 4px;}
+.list-info ul li.hover{background:#DFDFDF;}
+.list-info ul li.selected{background:#6D84B4;color: #FFFFFF;}
+.produce-info{float: left;width: 308px;border: 1px #898989 solid;clear:both;  overflow: hidden;}
+.conten-info{ width:468px;height:432px;float: left;display: inline;}
+.conten-info-1{padding: 0 10px 10px 0;}
+.conten-info-1 ul li{ line-height:25px; width: 100%;float: left;}
+.conten-info-1 strong{font-weight: 400;}
+.conten-info-1 strong.del{color: #404040;font-size: 12px;text-decoration: line-through;}
+.conten-info-1 .price strong{color: #FF5500;font-weight: 700;font: 24px Tahoma,Arial,Helvetica,sans-serif;vertical-align: middle;}
+.conten-info-1 .color-change ul li,.conten-info-1 .size-change li{margin-right: 10px;width: 40px;float: left;}
+.conten-info-1 .color-change li img{border: 30px;height: 30px;padding: 1px;border: 1px solid#BBB;cursor:pointer; background:#EEE;}
+.conten-info-1 .size-change li{display: block;width: 30px;height: 30px;line-height: 30px;border: 1px solid #AAA;cursor:pointer;text-align: center;overflow:hidden;margin-right: 6px;}
+.size-change .sieze-sleected{background-color: #F28E17;}
+/*添加评分等级的星星*/
+.rating{list-style:none;clear:both;overflow: hidden; position:relative;width: 80px;height: 16px;margin: 0 0 20px 0;padding: 0px; background: url(../images/star-matrix.gif) no-repeat 0 0;}
+.nostar{background-position: 0 0;}
+.onestar{background-position: 0 -16px;}/*因为不需要触发每个<a>标签才显示，所以可以直接在外围<div>添加背景图片*/
+.twostar{background-position: 0 -32px;}
+.threestar{background-position: 0 -48px;}
+.fourstar{background-position: 0 -64px;}
+.fivestar{background-position: 0 -80px;}
+.conten-info-1 .rating li{float: left;text-indent: -9999px;}
+.rating li a{width: 16px;height: 16px;position: absolute;top:0;	z-index: 200;}
+.rating li.one a{left: 0;}
+.rating li.two a{left: 16px;}
+.rating li.three a{left: 32px;}
+.rating li.four a{left: 48px;}
+.rating li.five a{left: 64px;}
+.rating li a:hover{background: url(../images/star-matrix.gif) no-repeat 0 0;width:80px;height:16px;overflow:hidden;left: 0;	
+                  z-index:2;}/*z-index:2;和上面的z-index: 200;可以让鼠标往回滑动时取消前面多选的星*/
+.rating li.one a:hover{background-position:0 -96px;} /*因为需要鼠标在每个星处都有响应，所以需要在<a>标签再次设置背景图片*/
+.rating li.two a:hover{background-position:0 -112px;}
+.rating li.three a:hover{background-position:0 -128px;}
+.rating li.four a:hover{background-position:0 -144px;}
+.rating li.five a:hover{background-position:0 -160px;}
